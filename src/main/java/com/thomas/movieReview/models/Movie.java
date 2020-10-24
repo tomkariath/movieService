@@ -1,4 +1,4 @@
-package com.thomas.movieReview.movies;
+package com.thomas.movieReview.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

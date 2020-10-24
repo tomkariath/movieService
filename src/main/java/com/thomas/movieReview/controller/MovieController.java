@@ -1,4 +1,4 @@
-package com.thomas.movieReview.movies;
+package com.thomas.movieReview.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,10 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.thomas.movieReview.exceptions.MovieNotFoundException;
+import com.thomas.movieReview.models.Movie;
+import com.thomas.movieReview.repository.MovieRepository;
 
 @RestController
 public class MovieController {
@@ -34,6 +37,7 @@ public class MovieController {
 	}
 	
 	//upVoteMovie
+	@PutMapping(path = "/movies/{movieId}/upVote")
 	public Optional<Movie> upVote(@PathVariable Integer movieId) throws Exception {
 		Optional<Movie> movie = movieRepo.findById(movieId);
 		
@@ -41,11 +45,14 @@ public class MovieController {
 			 throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
 		}
 		
-		movie.get().setGoodCount(movie.get().getGoodCount()+1);		
+		movie.get().setGoodCount(movie.get().getGoodCount()+1);	
+		
+		movieRepo.save(movie.get());
 		return movie;
 	}
 	
 	//downVoteMovie
+	@PutMapping(path = "/movies/{movieId}/downVote")
 	public Optional<Movie> downVoteMovie(@PathVariable Integer movieId) throws Exception {
 		Optional<Movie> movie = movieRepo.findById(movieId);
 		
@@ -53,7 +60,9 @@ public class MovieController {
 			 throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
 		}
 		
-		movie.get().setBadCount(movie.get().getBadCount()+1);		
+		movie.get().setBadCount(movie.get().getBadCount()+1);
+		movieRepo.save(movie.get());
+		
 		return movie;
 	}
 }
