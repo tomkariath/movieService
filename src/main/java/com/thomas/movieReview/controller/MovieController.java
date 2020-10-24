@@ -15,54 +15,66 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.thomas.movieReview.exception.MovieNotFoundException;
 import com.thomas.movieReview.model.Movie;
+import com.thomas.movieReview.model.User;
 import com.thomas.movieReview.repository.MovieRepository;
+import com.thomas.movieReview.repository.UserRepository;
 
 @RestController
 public class MovieController {
-	
+
 	@Autowired
 	MovieRepository movieRepo;
-	
+
+	@Autowired
+	UserRepository userRepo;
+
 	//getMovies
 	@GetMapping(path = "/movies")
 	public List<Movie> getAllMovies() {
 		List<Movie> moviesList = movieRepo.findAll();
 		return moviesList;
 	}
-	
+
+	//getMovies
+	@GetMapping(path = "/users")
+	public List<User> getAllUsers() {
+		List<User> userList = userRepo.findAll();
+		return userList;
+	}
+
 	//addMovies
 	@PostMapping(path = "/movies")
 	public Movie addMovie(@Valid @RequestBody Movie movie) {
 		return movieRepo.save(movie);
 	}
-	
+
 	//upVoteMovie
 	@PutMapping(path = "/movies/{movieId}/upVote")
 	public Optional<Movie> upVote(@PathVariable Integer movieId) throws Exception {
 		Optional<Movie> movie = movieRepo.findById(movieId);
-		
+
 		if (!movie.isPresent()) {
-			 throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
+			throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
 		}
-		
+
 		movie.get().setGoodCount(movie.get().getGoodCount()+1);	
-		
+
 		movieRepo.save(movie.get());
 		return movie;
 	}
-	
+
 	//downVoteMovie
 	@PutMapping(path = "/movies/{movieId}/downVote")
 	public Optional<Movie> downVoteMovie(@PathVariable Integer movieId) throws Exception {
 		Optional<Movie> movie = movieRepo.findById(movieId);
-		
+
 		if (!movie.isPresent()) {
-			 throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
+			throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
 		}
-		
+
 		movie.get().setBadCount(movie.get().getBadCount()+1);
 		movieRepo.save(movie.get());
-		
+
 		return movie;
 	}
 }

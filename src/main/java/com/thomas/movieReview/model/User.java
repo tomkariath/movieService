@@ -11,8 +11,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 
 @Entity
 public class User {
@@ -23,7 +21,7 @@ public class User {
 	
 	private String username;
 	
-	@JsonIgnore
+	//@JsonIgnore
 	private String password;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
