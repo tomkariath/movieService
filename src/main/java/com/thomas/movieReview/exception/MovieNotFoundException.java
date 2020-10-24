@@ -1,4 +1,4 @@
-package com.thomas.movieReview.exceptions;
+package com.thomas.movieReview.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

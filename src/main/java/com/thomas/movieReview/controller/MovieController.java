@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.thomas.movieReview.exceptions.MovieNotFoundException;
-import com.thomas.movieReview.models.Movie;
+import com.thomas.movieReview.exception.MovieNotFoundException;
+import com.thomas.movieReview.model.Movie;
 import com.thomas.movieReview.repository.MovieRepository;
 
 @RestController
