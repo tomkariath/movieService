@@ -61,6 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.csrf().disable().formLogin().disable()
 		.headers().frameOptions().disable().and()
 		.authorizeRequests()
+		.antMatchers("/**").permitAll()
 		.antMatchers("/h2-console/**").permitAll()
 		.antMatchers("/movies/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
 		.anyRequest().authenticated();
