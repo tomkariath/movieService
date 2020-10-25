@@ -44,8 +44,8 @@ public class MovieController {
 
 	//addMovies
 	@PostMapping(path = "/movies")
-	public Movie addMovie(@Valid @RequestBody Movie movie) {
-		return movieRepo.save(movie);
+	public void addMovie(@Valid @RequestBody Movie movie) {
+		movieRepo.save(movie);
 	}
 
 	//upVoteMovie
