@@ -6,11 +6,13 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.thomas.movieReview.exception.MovieNotFoundException;
@@ -44,13 +46,14 @@ public class MovieController {
 
 	//addMovies
 	@PostMapping(path = "/movies")
+	@ResponseStatus(code = HttpStatus.CREATED)
 	public void addMovie(@Valid @RequestBody Movie movie) {
 		movieRepo.save(movie);
 	}
 
 	//upVoteMovie
 	@PutMapping(path = "/movies/{movieId}/upVote")
-	public Optional<Movie> upVote(@PathVariable Integer movieId) throws Exception {
+	public void upVote(@PathVariable Integer movieId) throws Exception {
 		Optional<Movie> movie = movieRepo.findById(movieId);
 
 		if (!movie.isPresent()) {
@@ -60,12 +63,11 @@ public class MovieController {
 		movie.get().setGoodCount(movie.get().getGoodCount()+1);	
 
 		movieRepo.save(movie.get());
-		return movie;
 	}
 
 	//downVoteMovie
 	@PutMapping(path = "/movies/{movieId}/downVote")
-	public Optional<Movie> downVoteMovie(@PathVariable Integer movieId) throws Exception {
+	public void downVoteMovie(@PathVariable Integer movieId) throws Exception {
 		Optional<Movie> movie = movieRepo.findById(movieId);
 
 		if (!movie.isPresent()) {
@@ -74,7 +76,5 @@ public class MovieController {
 
 		movie.get().setBadCount(movie.get().getBadCount()+1);
 		movieRepo.save(movie.get());
-
-		return movie;
 	}
 }
