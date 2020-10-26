@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.thomas.movieReview.security.UserDetailsServiceImpl;
 
@@ -58,13 +59,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-		.csrf().disable().formLogin().disable()
+		.csrf().disable()
 		.headers().frameOptions().disable().and()
 		.authorizeRequests()
-		.antMatchers("/**").permitAll()
 		.antMatchers("/h2-console/**").permitAll()
-		.antMatchers("/movies/**").hasAnyAuthority("ROLE_USER", "ROLE_ADMIN")
-		.anyRequest().authenticated();
+		.antMatchers("/movies").hasAnyRole("USER", "ADMIN")
+		.anyRequest().authenticated()
+		.and().formLogin().permitAll()
+		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/showlist");
 
 		http.httpBasic();
 	}

@@ -12,8 +12,8 @@ public class Movie {
 	private Integer id;
 
 	private String name;
-	private Integer goodCount;
-	private Integer badCount;
+	private Integer goodCount=0;
+	private Integer badCount=0;
 
 	public Integer getId() {
 		return id;

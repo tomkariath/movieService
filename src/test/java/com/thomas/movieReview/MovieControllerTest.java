@@ -2,7 +2,6 @@ package com.thomas.movieReview;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 
 import java.util.Optional;
 
@@ -15,10 +14,8 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.thomas.movieReview.model.Movie;
-import com.thomas.movieReview.model.User;
 import com.thomas.movieReview.repository.MovieRepository;
 import com.thomas.movieReview.repository.UserRepository;
-import com.thomas.movieReview.ApiTest;
 
 public class MovieControllerTest extends ApiTest{
 

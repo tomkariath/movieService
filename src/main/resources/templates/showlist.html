@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head lang="en">
+	<title>Movie List</title>
+</head>
+<body>
+	<div class="container">
+		<div th:if="${not #lists.isEmpty(movies)}">
+			<h2>Product List</h2>
+			<table class="table table-striped">
+				<tr>
+					<th>Movie Name</th>
+					<th>Good</th>
+					<th>Bad</th>
+				</tr>
+				<tr th:each="movie : ${movies}">
+					<td th:text="${movie.name}">Name</td>
+					<td><a th:href="${ '/movies/' + movie.id +'/upVote'}">UpVote</a></td>
+					<td><a th:href="${'/movies/' + movie.id +'/downVote'}">DownVote</a></td>
+				</tr>
+			</table>
+
+		</div>
+		<div sec:authorize="hasRole('ROLE_ADMIN')">
+			<label>Add Movie</label>
+			<form action="#" th:action="@{/showlist}" method="post" th:object="${movie}">
+				<input type="text" th:field="*{name}" /><br/>
+				<button type="submit">Add</button>
+			</form>
+		</div>
+	</div>
+	
+	<a href="javascript: document.logoutForm.submit()" role="menuitem"> Logout</a>
+
+   <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+      <input type="submit" value="Sign Out"/>
+   </form>
+
+</body>
+</html>

@@ -9,6 +9,7 @@ import com.thomas.movieReview.model.Movie;
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	@PreAuthorize("hasRole('ADMIN')")
 	Movie save (Movie movie);
