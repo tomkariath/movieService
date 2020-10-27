@@ -1,0 +1,64 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: #34495e;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+	background-color: #2c3e50;
+	height: 20%;
+	width: 100%;
+	margin: 0;
+	display: block;
+	overflow: hidden;
+}
+
+#header h2 {
+	margin: 0;
+	padding: 1em;
+	color: #ecf0f1;
+	width: 30%;
+	float: left;
+}
+
+section {
+	background-color: #1abc9c;
+	text-align: center;
+	color: #ecf0f1;
+	padding: 5em;
+}
+
+#movieListSection {
+	background-color: #ecf0f1;
+	color: #2c3e50;
+}
+
+#movieListSection h2 {
+	margin-bottom: 1em;
+}
+
+#movieListSection table {
+	width: 40%;
+	margin: auto;
+	border-spacing: 1em;
+}
+
+#logout {
+	margin: 0;
+	background-color: #e74c3c;
+	font-weight: bold;
+	margin: 1em;
+	float: right;
+    font-size: 1.5em;
+	border-radius: .314em;
+}
+
+#logout a{
+	text-decoration: none;
+	padding: .5em;
+	color: #ecf0f1;
+}

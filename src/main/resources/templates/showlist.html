@@ -2,40 +2,63 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head lang="en">
-	<title>Movie List</title>
+<title>Movie List</title>
+<link th:href="@{/style.css}" rel="stylesheet" />
 </head>
 <body>
-	<div class="container">
-		<div th:if="${not #lists.isEmpty(movies)}">
-			<h2>Product List</h2>
-			<table class="table table-striped">
+	<article>
+		<header id="header">
+			<h2>Movie List</h2>
+
+			<table id="logout">
 				<tr>
-					<th>Movie Name</th>
-					<th>Good</th>
-					<th>Bad</th>
-				</tr>
-				<tr th:each="movie : ${movies}">
-					<td th:text="${movie.name}">Name</td>
-					<td><a th:text="${movie.goodCount}" th:href="${ '/movies/' + movie.id +'/upvote'}">UpVote</a></td>
-					<td><a th:text="${movie.badCount}" th:href="${'/movies/' + movie.id +'/downvote'}">DownVote</a></td>
+					<td><a href="javascript: document.logoutForm.submit()"
+						role="menuitem"> Logout</a></td>
+					<td>
+						<form name="logoutForm" th:action="@{/logout}" method="post"
+							th:hidden="true">
+							<input type="submit" value="Sign Out" />
+						</form>
+					</td>
 				</tr>
 			</table>
 
-		</div>
-		<div sec:authorize="hasRole('ROLE_ADMIN')">
-			<label>Add Movie</label>
-			<form action="#" th:action="@{/movies}" method="post" th:object="${movie}">
-				<input type="text" th:field="*{name}" /><br/>
-				<button type="submit">Add</button>
-			</form>
-		</div>
-	</div>
-	
-	<a href="javascript: document.logoutForm.submit()" role="menuitem"> Logout</a>
+		</header>
+		<section id="movieListSection">
+			<div id="content" class="container">
+				<div th:if="${not #lists.isEmpty(movies)}">
+					<table class="table table-striped">
+						<tr>
+							<th>Movie Name</th>
+							<th>Good</th>
+							<th>Bad</th>
+						</tr>
+						<tr th:each="movie : ${movies}">
+							<td th:text="${movie.name}">Name</td>
+							<td><a th:text="${movie.goodCount}"
+								th:href="${ '/movies/' + movie.id +'/upvote'}">UpVote</a></td>
+							<td><a th:text="${movie.badCount}"
+								th:href="${'/movies/' + movie.id +'/downvote'}">DownVote</a></td>
+						</tr>
+					</table>
+				</div>
 
-   <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
-      <input type="submit" value="Sign Out"/>
-   </form>
-
+				<div sec:authorize="hasRole('ROLE_ADMIN')">
+					<form action="#" th:action="@{/movies}" method="post"
+						th:object="${movie}">
+						<table>
+							<tr>
+								<td><label>Add Movie</label></td>
+								<td><input type="text" th:field="*{name}" /><br /></td>
+								<td>
+									<button type="submit">Add</button>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</section>
+	</article>
 </body>
 </html>

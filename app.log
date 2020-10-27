@@ -405,3 +405,429 @@ java.io.StreamCorruptedException: invalid type code: 00
 2020-10-27 12:25:21.524  INFO 16680 --- [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-10-27 12:25:21.530  INFO 16680 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2020-10-27 12:25:21.537  INFO 16680 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 12:31:20.990  INFO 9308 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 9308 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 12:31:20.994  INFO 9308 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 12:31:21.047  INFO 9308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 12:31:21.047  INFO 9308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 12:31:22.609  INFO 9308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 12:31:22.690  INFO 9308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+2020-10-27 12:31:23.273  INFO 9308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2ca281b7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:31:23.279  INFO 9308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:31:23.963  INFO 9308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 12:31:23.972  INFO 9308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 12:31:23.974  INFO 9308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 12:31:24.144  INFO 9308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 12:31:24.144  INFO 9308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3096 ms
+2020-10-27 12:31:24.466  INFO 9308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 12:31:24.633  INFO 9308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 12:31:24.640  INFO 9308 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 12:31:24.905  WARN 9308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [F7E596220AD84994B8C8DC785A56A085]
+2020-10-27 12:31:25.042  INFO 9308 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 12:31:25.091  INFO 9308 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 12:31:25.192  INFO 9308 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 12:31:25.313  INFO 9308 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 12:31:26.041  INFO 9308 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 12:31:26.049  INFO 9308 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:31:26.130  INFO 9308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 12:31:26.212  WARN 9308 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 12:31:26.934  WARN 9308 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:31:26.934  WARN 9308 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 12:31:26.934  WARN 9308 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:31:27.808  INFO 9308 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 12:31:28.299  INFO 9308 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a0e0092, org.springframework.security.web.context.SecurityContextPersistenceFilter@49557955, org.springframework.security.web.header.HeaderWriterFilter@7518eaa6, org.springframework.security.web.authentication.logout.LogoutFilter@d733782, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40de2671, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a0f3eda, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@61de345, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@13c39441, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58d1a0af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eac611a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52d795ca, org.springframework.security.web.session.SessionManagementFilter@39f2d51d, org.springframework.security.web.access.ExceptionTranslationFilter@75a4564d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fdd0be9]
+2020-10-27 12:31:28.504  INFO 9308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:31:29.106  INFO 9308 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 12:31:29.109  INFO 9308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 12:31:29.144  INFO 9308 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 35 ms
+2020-10-27 12:31:29.502  INFO 9308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 12:31:30.228  INFO 9308 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 9.613 seconds (JVM running for 10.875)
+2020-10-27 12:31:42.799  WARN 9308 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [236] milliseconds.
+2020-10-27 12:31:42.838  INFO 9308 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:31:51.429  INFO 9308 --- [RMI TCP Connection(5)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 12:31:51.618  INFO 9308 --- [RMI TCP Connection(5)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:31:51.629  INFO 9308 --- [RMI TCP Connection(5)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:31:51.636  INFO 9308 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 12:31:51.642  INFO 9308 --- [RMI TCP Connection(5)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 12:32:40.634  INFO 9508 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 9508 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 12:32:40.643  INFO 9508 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 12:32:40.693  INFO 9508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 12:32:40.693  INFO 9508 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 12:32:42.667  INFO 9508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 12:32:42.778  INFO 9508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 3 JPA repository interfaces.
+2020-10-27 12:32:43.329  INFO 9508 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2bc3a274' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:32:43.335  INFO 9508 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:32:43.860  INFO 9508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 12:32:43.868  INFO 9508 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 12:32:43.869  INFO 9508 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 12:32:43.996  INFO 9508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 12:32:43.997  INFO 9508 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3303 ms
+2020-10-27 12:32:44.287  INFO 9508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 12:32:44.509  INFO 9508 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 12:32:44.518  INFO 9508 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 12:32:44.757  WARN 9508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [A0F76B84934FBA4C58A5F72E56037DC9]
+2020-10-27 12:32:44.967  INFO 9508 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 12:32:45.022  INFO 9508 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 12:32:45.129  INFO 9508 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 12:32:45.224  INFO 9508 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 12:32:45.955  INFO 9508 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 12:32:45.967  INFO 9508 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:32:46.063  INFO 9508 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 12:32:46.197  WARN 9508 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 12:32:46.888  WARN 9508 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:32:46.889  WARN 9508 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 12:32:46.889  WARN 9508 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:32:48.123  INFO 9508 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 12:32:48.726  INFO 9508 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46b9a519, org.springframework.security.web.context.SecurityContextPersistenceFilter@51efcdb3, org.springframework.security.web.header.HeaderWriterFilter@3f5352d0, org.springframework.security.web.authentication.logout.LogoutFilter@77bec0fc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5d55f002, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2418d098, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@42b41af0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2688d0b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32faac48, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a74b930, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d987792, org.springframework.security.web.session.SessionManagementFilter@a9ecd1c, org.springframework.security.web.access.ExceptionTranslationFilter@5195323, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7be43fd0]
+2020-10-27 12:32:48.937  INFO 9508 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:32:49.741  INFO 9508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 12:32:50.492  INFO 9508 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 10.269 seconds (JVM running for 11.393)
+2020-10-27 12:32:52.526  INFO 9508 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 12:32:52.527  INFO 9508 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 12:32:52.546  INFO 9508 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-10-27 12:33:09.417  WARN 9508 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [254] milliseconds.
+2020-10-27 12:33:09.454  INFO 9508 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:33:40.972  INFO 9508 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 12:33:41.167  INFO 9508 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:33:41.176  INFO 9508 --- [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:33:41.182  INFO 9508 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 12:33:41.186  INFO 9508 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 12:33:51.068  INFO 18108 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 18108 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 12:33:51.075  INFO 18108 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 12:33:51.157  INFO 18108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 12:33:51.158  INFO 18108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 12:33:53.073  INFO 18108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 12:33:53.191  INFO 18108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109ms. Found 3 JPA repository interfaces.
+2020-10-27 12:33:53.790  INFO 18108 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@11e93147' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:33:53.798  INFO 18108 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:33:54.426  INFO 18108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 12:33:54.437  INFO 18108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 12:33:54.437  INFO 18108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 12:33:54.592  INFO 18108 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 12:33:54.593  INFO 18108 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3435 ms
+2020-10-27 12:33:54.915  INFO 18108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 12:33:55.108  INFO 18108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 12:33:55.114  INFO 18108 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 12:33:55.357  WARN 18108 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [4C56C69A4A07C7ECA326944172FFC348]
+2020-10-27 12:33:55.368 ERROR 18108 --- [restartedMain] o.a.catalina.session.StandardManager     : Exception loading sessions from persistent storage
+
+java.io.StreamCorruptedException: invalid type code: 00
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1622) ~[na:na]
+	at java.base/java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2355) ~[na:na]
+	at java.base/java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:566) ~[na:na]
+	at java.base/java.lang.Throwable.readObject(Throwable.java:896) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at java.base/java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1160) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2216) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2087) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1594) ~[na:na]
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:430) ~[na:na]
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1545) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1040) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:218) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:354) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5156) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:437) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:178) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:158) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:545) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+	at com.thomas.movieReview.MovieReviewApplication.main(MovieReviewApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.3.4.RELEASE.jar:2.3.4.RELEASE]
+
+2020-10-27 12:33:55.505  INFO 18108 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 12:33:55.546  INFO 18108 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 12:33:55.648  INFO 18108 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 12:33:55.772  INFO 18108 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 12:33:56.546  INFO 18108 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 12:33:56.560  INFO 18108 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:33:56.700  INFO 18108 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 12:33:56.806  WARN 18108 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 12:33:57.456  WARN 18108 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:33:57.457  WARN 18108 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 12:33:57.457  WARN 18108 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:33:58.446  INFO 18108 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 12:33:59.016  INFO 18108 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27635183, org.springframework.security.web.context.SecurityContextPersistenceFilter@69db75ab, org.springframework.security.web.header.HeaderWriterFilter@3be29abe, org.springframework.security.web.authentication.logout.LogoutFilter@5dd1bcaf, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8620e5a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a6addbb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@71322b91, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@53d1afb9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79089293, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5747709c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6fafe920, org.springframework.security.web.session.SessionManagementFilter@7986db25, org.springframework.security.web.access.ExceptionTranslationFilter@6352fe3b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b0cb327]
+2020-10-27 12:33:59.247  INFO 18108 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:33:59.874  INFO 18108 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 12:33:59.875  INFO 18108 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 12:33:59.893  INFO 18108 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-10-27 12:34:00.020  INFO 18108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 12:34:00.654  INFO 18108 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 10.209 seconds (JVM running for 11.334)
+2020-10-27 12:34:11.233  WARN 18108 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [138] milliseconds.
+2020-10-27 12:34:11.258  INFO 18108 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:39:40.233  INFO 18108 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 12:39:40.485  INFO 18108 --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:39:40.500  INFO 18108 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:39:40.511  INFO 18108 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 12:39:40.521  INFO 18108 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 12:39:45.823  INFO 19036 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 19036 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 12:39:45.827  INFO 19036 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 12:39:45.873  INFO 19036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 12:39:45.873  INFO 19036 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 12:39:47.482  INFO 19036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 12:39:47.582  INFO 19036 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91ms. Found 3 JPA repository interfaces.
+2020-10-27 12:39:48.275  INFO 19036 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3e2a20b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:39:48.278  INFO 19036 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 12:39:48.647  INFO 19036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 12:39:48.657  INFO 19036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 12:39:48.657  INFO 19036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 12:39:48.784  INFO 19036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 12:39:48.785  INFO 19036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2911 ms
+2020-10-27 12:39:49.050  INFO 19036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 12:39:49.250  INFO 19036 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 12:39:49.260  INFO 19036 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 12:39:49.526  WARN 19036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [B4C703655DAB1C38A9CB6A16AF34DC7E]
+2020-10-27 12:39:49.679  INFO 19036 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 12:39:49.746  INFO 19036 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 12:39:49.896  INFO 19036 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 12:39:50.026  INFO 19036 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 12:39:50.828  INFO 19036 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 12:39:50.839  INFO 19036 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 12:39:50.927  INFO 19036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 12:39:50.999  WARN 19036 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 12:39:51.722  WARN 19036 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:39:51.722  WARN 19036 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 12:39:51.722  WARN 19036 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 12:39:52.718  INFO 19036 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 12:39:53.280  INFO 19036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a5c205b, org.springframework.security.web.context.SecurityContextPersistenceFilter@143d3869, org.springframework.security.web.header.HeaderWriterFilter@4ffedd23, org.springframework.security.web.authentication.logout.LogoutFilter@13b58d5a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@20716101, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2621450b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@34c5ae38, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@587b3c1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@462f0e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1df38c2b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@580882a1, org.springframework.security.web.session.SessionManagementFilter@34925304, org.springframework.security.web.access.ExceptionTranslationFilter@77937e6f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@735147b9]
+2020-10-27 12:39:53.496  INFO 19036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 12:39:54.326  INFO 19036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 12:39:54.945  INFO 19036 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 12:39:54.947  INFO 19036 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 12:39:54.967  INFO 19036 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-10-27 12:39:55.012  INFO 19036 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 9.64 seconds (JVM running for 11.213)
+2020-10-27 12:40:06.403  WARN 19036 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [210] milliseconds.
+2020-10-27 12:40:06.439  INFO 19036 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:43:07.756  INFO 19036 --- [http-nio-8080-exec-9] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:43:33.268  INFO 19036 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:44:36.766  INFO 19036 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:45:45.188  INFO 19036 --- [http-nio-8080-exec-9] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:46:41.515  INFO 19036 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:47:11.134  INFO 19036 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:47:47.681  INFO 19036 --- [http-nio-8080-exec-8] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:48:23.764  INFO 19036 --- [http-nio-8080-exec-10] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:49:11.308  INFO 19036 --- [http-nio-8080-exec-2] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:49:40.827  INFO 19036 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:51:31.243  INFO 19036 --- [http-nio-8080-exec-9] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:52:28.967  INFO 19036 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:53:22.016  INFO 19036 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:53:39.080  INFO 19036 --- [http-nio-8080-exec-6] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:55:38.739  INFO 19036 --- [http-nio-8080-exec-10] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:55:40.430  INFO 19036 --- [http-nio-8080-exec-2] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:55:41.639  INFO 19036 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 12:55:57.759  INFO 19036 --- [http-nio-8080-exec-6] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:00:10.989  INFO 19036 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:00:37.576  INFO 19036 --- [http-nio-8080-exec-3] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:01:17.739  INFO 19036 --- [http-nio-8080-exec-6] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:01:19.283  INFO 19036 --- [http-nio-8080-exec-8] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:01:19.499  INFO 19036 --- [http-nio-8080-exec-10] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:03:02.875  INFO 19036 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:03:16.708  INFO 19036 --- [http-nio-8080-exec-6] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:05:30.366  INFO 19036 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:05:51.952  INFO 19036 --- [http-nio-8080-exec-3] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:06:22.777  INFO 19036 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:06:58.866  INFO 19036 --- [http-nio-8080-exec-8] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:08:40.863  INFO 19036 --- [RMI TCP Connection(34)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 13:08:41.262  INFO 19036 --- [RMI TCP Connection(34)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 13:08:41.278  INFO 19036 --- [RMI TCP Connection(34)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 13:08:41.289  INFO 19036 --- [RMI TCP Connection(34)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 13:08:41.300  INFO 19036 --- [RMI TCP Connection(34)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 13:11:10.657  INFO 18184 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 18184 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 13:11:10.662  INFO 18184 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 13:11:10.710  INFO 18184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 13:11:10.710  INFO 18184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 13:11:12.713  INFO 18184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 13:11:12.815  INFO 18184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 3 JPA repository interfaces.
+2020-10-27 13:11:13.416  INFO 18184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3f8b26f9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 13:11:13.423  INFO 18184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 13:11:13.822  INFO 18184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 13:11:13.832  INFO 18184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 13:11:13.833  INFO 18184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 13:11:13.983  INFO 18184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 13:11:13.984  INFO 18184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3274 ms
+2020-10-27 13:11:14.292  INFO 18184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 13:11:14.448  INFO 18184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 13:11:14.454  INFO 18184 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 13:11:14.677  WARN 18184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [31009B82FB342722027324C7A43799C4]
+2020-10-27 13:11:14.831  INFO 18184 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 13:11:14.897  INFO 18184 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 13:11:15.018  INFO 18184 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 13:11:15.175  INFO 18184 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 13:11:15.902  INFO 18184 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 13:11:15.910  INFO 18184 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 13:11:15.994  INFO 18184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 13:11:16.087  WARN 18184 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 13:11:16.880  WARN 18184 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 13:11:16.881  WARN 18184 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 13:11:16.881  WARN 18184 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 13:11:17.984  INFO 18184 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 13:11:18.482  INFO 18184 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58ead612, org.springframework.security.web.context.SecurityContextPersistenceFilter@397d3966, org.springframework.security.web.header.HeaderWriterFilter@486f658, org.springframework.security.web.authentication.logout.LogoutFilter@506f45aa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@79512d81, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7e996168, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@71166ece, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@35b5a3fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45f40446, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@393c5126, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57919744, org.springframework.security.web.session.SessionManagementFilter@5fb0ef25, org.springframework.security.web.access.ExceptionTranslationFilter@3e654130, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@88dddd9]
+2020-10-27 13:11:18.705  INFO 18184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 13:11:20.025  INFO 18184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 13:11:20.695  INFO 18184 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 10.4 seconds (JVM running for 11.707)
+2020-10-27 13:11:20.722  INFO 18184 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 13:11:20.724  INFO 18184 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 13:11:20.740  INFO 18184 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-10-27 13:11:30.515  WARN 18184 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [164] milliseconds.
+2020-10-27 13:11:30.541  INFO 18184 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:12:28.934  INFO 18184 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 13:12:29.123  INFO 18184 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 13:12:29.129  INFO 18184 --- [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 13:12:29.134  INFO 18184 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 13:12:29.138  INFO 18184 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 13:12:54.607  INFO 16484 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 16484 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 13:12:54.620  INFO 16484 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 13:12:54.724  INFO 16484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 13:12:54.725  INFO 16484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 13:12:56.671  INFO 16484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 13:12:56.756  INFO 16484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73ms. Found 3 JPA repository interfaces.
+2020-10-27 13:12:57.375  INFO 16484 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@463906ee' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 13:12:57.381  INFO 16484 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 13:12:57.948  INFO 16484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 13:12:57.958  INFO 16484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 13:12:57.958  INFO 16484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 13:12:58.080  INFO 16484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 13:12:58.081  INFO 16484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3355 ms
+2020-10-27 13:12:58.369  INFO 16484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 13:12:58.515  INFO 16484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 13:12:58.522  INFO 16484 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 13:12:58.730  WARN 16484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [940B64BC050387DA60173473ACBCCE6A]
+2020-10-27 13:12:58.867  INFO 16484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 13:12:58.910  INFO 16484 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 13:12:59.021  INFO 16484 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 13:12:59.143  INFO 16484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 13:12:59.837  INFO 16484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 13:12:59.845  INFO 16484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 13:12:59.931  INFO 16484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 13:13:00.036  WARN 16484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 13:13:00.679  WARN 16484 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 13:13:00.679  WARN 16484 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 13:13:00.679  WARN 16484 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 13:13:01.819  INFO 16484 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 13:13:02.365  INFO 16484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4711b1ab, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f13dea1, org.springframework.security.web.header.HeaderWriterFilter@1b43c027, org.springframework.security.web.authentication.logout.LogoutFilter@3dbf7ba5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@463e481b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@43d813f5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@59926f03, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1ad76742, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@574da314, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68f06e2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2dd0b7e, org.springframework.security.web.session.SessionManagementFilter@715c0751, org.springframework.security.web.access.ExceptionTranslationFilter@ffba7d6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17beb32f]
+2020-10-27 13:13:02.560  INFO 16484 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 13:13:03.319  INFO 16484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 13:13:04.120  INFO 16484 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 10.22 seconds (JVM running for 11.618)
+2020-10-27 13:13:05.823  INFO 16484 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 13:13:05.824  INFO 16484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 13:13:05.850  INFO 16484 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2020-10-27 13:13:11.966  WARN 16484 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [148] milliseconds.
+2020-10-27 13:13:11.991  INFO 16484 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:15:27.144  INFO 16484 --- [http-nio-8080-exec-3] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:16:49.118  INFO 16484 --- [http-nio-8080-exec-7] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:18:30.639  INFO 16484 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:18:41.408  INFO 16484 --- [http-nio-8080-exec-3] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:19:09.723  INFO 16484 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:19:27.629  INFO 16484 --- [http-nio-8080-exec-7] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:19:46.102  INFO 16484 --- [http-nio-8080-exec-9] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:19:54.616  INFO 16484 --- [http-nio-8080-exec-2] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:20:27.710  INFO 16484 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:20:45.387  INFO 16484 --- [http-nio-8080-exec-6] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:21:17.244  INFO 16484 --- [http-nio-8080-exec-10] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:21:31.031  INFO 16484 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:12.693  INFO 16484 --- [http-nio-8080-exec-3] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:14.148  INFO 16484 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:14.905  INFO 16484 --- [http-nio-8080-exec-7] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:29.641  INFO 16484 --- [http-nio-8080-exec-9] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:40.713  INFO 16484 --- [http-nio-8080-exec-2] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:45.367  INFO 16484 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:22:51.879  INFO 16484 --- [http-nio-8080-exec-6] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:23:12.223  INFO 16484 --- [http-nio-8080-exec-8] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:23:46.542  INFO 16484 --- [http-nio-8080-exec-5] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:23:55.280  INFO 16484 --- [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 13:23:55.561  INFO 16484 --- [RMI TCP Connection(14)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 13:23:55.581  INFO 16484 --- [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 13:23:55.594  INFO 16484 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 13:23:55.604  INFO 16484 --- [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-27 13:27:08.649  INFO 7388 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on L12101324 with PID 7388 (C:\Thomas\PracticeWorkSpace\movieReview\target\classes started by Johny.Thomas in C:\Thomas\PracticeWorkSpace\movieReview)
+2020-10-27 13:27:08.660  INFO 7388 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-27 13:27:08.777  INFO 7388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-27 13:27:08.778  INFO 7388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-27 13:27:11.341  INFO 7388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-27 13:27:11.422  INFO 7388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 3 JPA repository interfaces.
+2020-10-27 13:27:12.043  INFO 7388 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@67f33069' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 13:27:12.051  INFO 7388 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-27 13:27:12.502  INFO 7388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-27 13:27:12.510  INFO 7388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-27 13:27:12.511  INFO 7388 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-27 13:27:12.654  INFO 7388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-27 13:27:12.655  INFO 7388 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3876 ms
+2020-10-27 13:27:12.952  INFO 7388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-27 13:27:13.175  INFO 7388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-27 13:27:13.181  INFO 7388 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-27 13:27:13.390  WARN 7388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [4D7AF495BADD72A34090A8706BBFA6C2]
+2020-10-27 13:27:13.537  INFO 7388 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-27 13:27:13.580  INFO 7388 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-27 13:27:13.688  INFO 7388 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-27 13:27:13.793  INFO 7388 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-27 13:27:14.509  INFO 7388 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-27 13:27:14.517  INFO 7388 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 13:27:14.623  INFO 7388 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-27 13:27:14.791  WARN 7388 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-27 13:27:15.550  WARN 7388 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 13:27:15.550  WARN 7388 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-27 13:27:15.550  WARN 7388 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-27 13:27:16.746  INFO 7388 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-27 13:27:17.280  INFO 7388 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b2e44ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@7645af33, org.springframework.security.web.header.HeaderWriterFilter@43f0a5cb, org.springframework.security.web.authentication.logout.LogoutFilter@326e8108, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d5a8535, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6bff8193, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5efd052b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5b57eddb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@322b1ac1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e24a453, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c7fc8f, org.springframework.security.web.session.SessionManagementFilter@3f8b561a, org.springframework.security.web.access.ExceptionTranslationFilter@70b1e050, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6893080]
+2020-10-27 13:27:17.483  INFO 7388 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-27 13:27:18.254  INFO 7388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-27 13:27:19.062  INFO 7388 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 11.01 seconds (JVM running for 12.18)
+2020-10-27 13:27:19.803  INFO 7388 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-27 13:27:19.805  INFO 7388 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-27 13:27:19.855  INFO 7388 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 49 ms
+2020-10-27 13:27:37.500  WARN 7388 --- [http-nio-8080-exec-3] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [221] milliseconds.
+2020-10-27 13:27:37.549  INFO 7388 --- [http-nio-8080-exec-4] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:28:23.245  INFO 7388 --- [http-nio-8080-exec-1] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:28:33.204  INFO 7388 --- [http-nio-8080-exec-7] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:28:42.776  INFO 7388 --- [http-nio-8080-exec-9] c.t.m.controller.MovieController         : POST /movies
+2020-10-27 13:28:45.187  INFO 7388 --- [http-nio-8080-exec-10] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 13:28:59.294  INFO 7388 --- [http-nio-8080-exec-2] c.t.m.controller.MovieController         : GET /movies/56upvote
+2020-10-27 13:29:01.217  INFO 7388 --- [http-nio-8080-exec-3] c.t.m.controller.MovieController         : GET /showlist
+2020-10-27 14:01:58.335  WARN 7388 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m15s52ms901µs844ns).
+2020-10-27 14:23:31.062  WARN 7388 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m32s689ms927µs123ns).
+2020-10-27 14:25:15.437  WARN 7388 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m14s371ms703µs453ns).
+2020-10-27 14:25:44.561  INFO 7388 --- [RMI TCP Connection(29)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-27 14:25:44.708  INFO 7388 --- [RMI TCP Connection(29)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-27 14:25:44.713  INFO 7388 --- [RMI TCP Connection(29)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-27 14:25:44.717  INFO 7388 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-27 14:25:44.721  INFO 7388 --- [RMI TCP Connection(29)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
