@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 		var movie = {};
 		movie["name"] = $("#movieName").val();
-		
+
 		$("#addButton").prop("disabled", true);
 		console.log("test: " + JSON.stringify(movie));
 
@@ -21,11 +21,28 @@ $(document).ready(function() {
 				console.log("SUCCESS : " + data);
 				location.reload();
 			},
-			error: function(e) { 
+			error: function(e) {
 				console.log("ERROR : ", e);
 			}
 		});
 
 	});
 
+	$(".upvoteLink").on('click', function() {
+		var url = '/movies/' + $(this).attr("id") + '/upvote';
+		console.log(url);
+
+		$.get(url, function() {
+			location.reload();
+		});
+	});
+	
+	$(".downvoteLink").on('click', function() {
+		var url = '/movies/' + $(this).attr("id") + '/downvote';
+		console.log(url);
+
+		$.get(url, function() {
+			location.reload();
+		});
+	});
 });
