@@ -2,6 +2,7 @@ package com.thomas.movieReview.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -62,8 +63,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.csrf().disable()
 		.headers().frameOptions().disable().and()
 		.authorizeRequests()
+		.antMatchers("/actuator/**").permitAll()
 		.antMatchers("/h2-console/**").permitAll()
-		.antMatchers("/movies").hasAnyRole("USER", "ADMIN")
+		.antMatchers(HttpMethod.POST,"/movies/**").hasAnyRole("ADMIN")
+		.antMatchers("/movies/**").hasAnyRole("USER", "ADMIN")
 		.anyRequest().authenticated()
 		.and().formLogin().permitAll()
 		.and().logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/showlist");

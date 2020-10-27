@@ -16,15 +16,15 @@
 				</tr>
 				<tr th:each="movie : ${movies}">
 					<td th:text="${movie.name}">Name</td>
-					<td><a th:href="${ '/movies/' + movie.id +'/upVote'}">UpVote</a></td>
-					<td><a th:href="${'/movies/' + movie.id +'/downVote'}">DownVote</a></td>
+					<td><a th:text="${movie.goodCount}" th:href="${ '/movies/' + movie.id +'/upvote'}">UpVote</a></td>
+					<td><a th:href="${'/movies/' + movie.id +'/downvote'}">DownVote</a></td>
 				</tr>
 			</table>
 
 		</div>
 		<div sec:authorize="hasRole('ROLE_ADMIN')">
 			<label>Add Movie</label>
-			<form action="#" th:action="@{/showlist}" method="post" th:object="${movie}">
+			<form action="#" th:action="@{/movies}" method="post" th:object="${movie}">
 				<input type="text" th:field="*{name}" /><br/>
 				<button type="submit">Add</button>
 			</form>
