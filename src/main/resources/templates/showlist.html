@@ -17,7 +17,7 @@
 				<tr th:each="movie : ${movies}">
 					<td th:text="${movie.name}">Name</td>
 					<td><a th:text="${movie.goodCount}" th:href="${ '/movies/' + movie.id +'/upvote'}">UpVote</a></td>
-					<td><a th:href="${'/movies/' + movie.id +'/downvote'}">DownVote</a></td>
+					<td><a th:text="${movie.badCount}" th:href="${'/movies/' + movie.id +'/downvote'}">DownVote</a></td>
 				</tr>
 			</table>
 
