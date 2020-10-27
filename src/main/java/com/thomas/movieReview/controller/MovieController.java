@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,20 +23,25 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.thomas.movieReview.exception.MovieNotFoundException;
 import com.thomas.movieReview.model.Movie;
+import com.thomas.movieReview.model.Rating;
 import com.thomas.movieReview.model.User;
 import com.thomas.movieReview.repository.MovieRepository;
+import com.thomas.movieReview.repository.RatingRepository;
 import com.thomas.movieReview.repository.UserRepository;
 
 @RestController
 public class MovieController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MovieController.class);
-	
+
 	@Autowired
 	MovieRepository movieRepo;
 
 	@Autowired
 	UserRepository userRepo;
+
+	@Autowired
+	RatingRepository ratingRepo;
 
 	//getMovies
 	@GetMapping(path = "/movies")
@@ -75,16 +81,28 @@ public class MovieController {
 	@RequestMapping(path = "/movies/{movieId}/upvote")
 	public void upVote(@PathVariable Integer movieId) throws Exception {
 		logger.info("GET /movies/"+movieId+"upvote");
-		
+
 		Optional<Movie> movie = movieRepo.findById(movieId);
 
 		if (!movie.isPresent()) {
 			throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
 		}
 
-		movie.get().setGoodCount(movie.get().getGoodCount()+1);	
+		User reviewer = userRepo.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 
-		movieRepo.save(movie.get());
+		if (ratingRepo.findByMovieIdAndUserId(movieId, reviewer.getId())==null) {
+			Rating rating = new Rating();
+			rating.setMovie(movie.get());
+			rating.setUser(reviewer);
+
+			ratingRepo.save(rating);
+
+			movie.get().setGoodCount(movie.get().getGoodCount()+1);	
+			movieRepo.save(movie.get());
+		}
+		else {
+			throw new Exception("Already Voted");
+		}
 	}
 
 	//downVoteMovie
@@ -97,7 +115,20 @@ public class MovieController {
 			throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
 		}
 
-		movie.get().setBadCount(movie.get().getBadCount()+1);
-		movieRepo.save(movie.get());
+		User reviewer = userRepo.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
+
+		if (ratingRepo.findByMovieIdAndUserId(movieId, reviewer.getId())==null) {
+			Rating rating = new Rating();
+			rating.setMovie(movie.get());
+			rating.setUser(reviewer);
+
+			ratingRepo.save(rating);
+
+			movie.get().setGoodCount(movie.get().getBadCount()+1);	
+			movieRepo.save(movie.get());
+		}
+		else {
+			throw new Exception("Already Voted");
+		}
 	}
 }
