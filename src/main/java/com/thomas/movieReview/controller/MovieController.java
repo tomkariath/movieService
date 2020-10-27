@@ -1,8 +1,10 @@
 package com.thomas.movieReview.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -10,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -51,7 +52,6 @@ public class MovieController {
 		ModelAndView mav = new ModelAndView("showlist");
 		List<Movie> moviesList = movieRepo.findAll();
 		mav.addObject("movies", moviesList);
-		mav.addObject("movie", new Movie());
 		return mav;
 	}
 
@@ -65,8 +65,9 @@ public class MovieController {
 	//addMovies
 	@PostMapping(path = "/movies")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public void addMovie(@ModelAttribute("movie") @Valid @RequestBody Movie movie) {
-		logger.info("POST /movies");
+	public void addMovie(@Valid @RequestBody Movie movie, 
+			HttpServletResponse httpResponse) throws IOException {
+		logger.info("POST /movies "+movie.toString());
 		movieRepo.save(movie);
 	}
 

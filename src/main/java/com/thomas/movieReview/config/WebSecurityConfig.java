@@ -64,6 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		.headers().frameOptions().disable().and()
 		.authorizeRequests()
 		.antMatchers("/actuator/**").permitAll()
+		.antMatchers("/users/**").permitAll()
 		.antMatchers("/h2-console/**").permitAll()
 		.antMatchers(HttpMethod.POST,"/movies/**").hasAnyRole("ADMIN")
 		.antMatchers("/movies/**").hasAnyRole("USER", "ADMIN")

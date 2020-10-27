@@ -4,6 +4,7 @@
 <head lang="en">
 <title>Movie List</title>
 <link th:href="@{/style.css}" rel="stylesheet" />
+
 </head>
 <body>
 	<article>
@@ -35,23 +36,24 @@
 						</tr>
 						<tr th:each="movie : ${movies}">
 							<td th:text="${movie.name}">Name</td>
-							<td><a th:text="${movie.goodCount}"
+							<td><a id="upvoteLink" th:text="${movie.goodCount}"
 								th:href="${ '/movies/' + movie.id +'/upvote'}">UpVote</a></td>
-							<td><a th:text="${movie.badCount}"
+							<td><a id="downvoteLink" th:text="${movie.badCount}"
 								th:href="${'/movies/' + movie.id +'/downvote'}">DownVote</a></td>
 						</tr>
 					</table>
 				</div>
 
 				<div sec:authorize="hasRole('ROLE_ADMIN')">
-					<form action="#" th:action="@{/movies}" method="post"
-						th:object="${movie}">
+					<form id="addMovieForm">
+						<!-- <form action="#" th:action="@{/movies}" method="post"
+						th:object="${movie}"> -->
 						<table>
 							<tr>
 								<td><label>Add Movie</label></td>
-								<td><input type="text" th:field="*{name}" /><br /></td>
+								<td><input type="text" id="movieName"/><br /></td>
 								<td>
-									<button type="submit">Add</button>
+									<button id="addButton" type="submit">Add</button>
 								</td>
 							</tr>
 						</table>
@@ -60,5 +62,8 @@
 			</div>
 		</section>
 	</article>
+
+	<script type="text/javascript" src="webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scriptfile.js"></script>
 </body>
 </html>
