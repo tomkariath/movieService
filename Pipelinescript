@@ -1,0 +1,28 @@
+node {
+    stage 'Clone the project'
+    git 'https://github.com/oracle-osvc-ext/johny-thomas-interview-project.git'
+  
+    dir('movieReview') {
+        
+        stage("Tests and Deployment") {
+            stage("Runing unit tests") {
+                try {
+                    sh "./mvnw clean install"
+                } catch(err) {
+                    step([$class: 'JUnitResultArchiver', testResults: 
+                    '**/target/surefire-reports/TEST-*UnitTest.xml'])
+                    throw err
+                }
+                step([$class: 'JUnitResultArchiver', testResults: 
+                '**/target/surefire-reports/TEST-*UnitTest.xml'])
+            }
+            
+            
+            stage("Staging") {
+                withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
+                    sh 'nohup ./mvnw spring-boot:run &'
+                }   
+            }
+        }
+    }
+}

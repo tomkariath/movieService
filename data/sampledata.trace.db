@@ -1303,3 +1303,9 @@ insert into table (7,0,0,'Good Will Hunting') [42001-200]
 2020-10-26 18:36:49 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO TABLE[*] VALUES (7,0,0,'Good Will Hunting')"; expected "identifier"; SQL statement:
 insert into table values (7,0,0,'Good Will Hunting') [42001-200]
+2020-10-27 15:39:48 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT IGNORE[*] INTO MOVIE VALUES (3,0,0,'Masaan')"; expected "INTO"; SQL statement:
+insert ignore into movie values (3,0,0,'Masaan') [42001-200]
+2020-10-27 15:41:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO MOVIE VALUES (3,0,0,'Masaan') WHERE[*] NOT EXISTS(SELECT * FROM TEST WHERE NAME = 'Masaan')"; SQL statement:
+insert into movie values (3,0,0,'Masaan') where not exists(select * from test where name = 'Masaan') [42000-200]
