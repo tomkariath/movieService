@@ -12,6 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.web.util.NestedServletException;
 
 import com.thomas.movieReview.model.Movie;
 import com.thomas.movieReview.repository.MovieRepository;
@@ -64,7 +65,7 @@ public class MovieControllerTest extends ApiTest{
 		assertEquals(201, status);
 	}
 	
-	@Test
+	@Test(expected = NestedServletException.class)
 	@WithMockUser(roles="USER")
 	public void addMovieUserTest() throws Exception {
 		String uri = "/movies";
@@ -76,11 +77,8 @@ public class MovieControllerTest extends ApiTest{
 		movie.setBadCount(0);
 		String json = super.objToJson(movie);
 
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(uri)
+		mockMvc.perform(MockMvcRequestBuilders.post(uri)
 				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json)).andReturn();
-
-		int status = mvcResult.getResponse().getStatus();
-		assertEquals(403, status);
 	}
 
 	@Test

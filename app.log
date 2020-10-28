@@ -2481,3 +2481,177 @@ java.lang.Exception: Already Voted
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.38.jar:9.0.38]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
 
+2020-10-28 14:22:48.990  INFO 4504 --- [main] c.t.movieReview.MovieControllerTest      : Starting MovieControllerTest on LAPTOP-3N47KQ25 with PID 4504 (started by tomka in D:\WorkSpace\movieService)
+2020-10-28 14:22:48.990  INFO 4504 --- [main] c.t.movieReview.MovieControllerTest      : No active profile set, falling back to default profiles: default
+2020-10-28 14:22:52.521  INFO 4504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-28 14:22:52.646  INFO 4504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118ms. Found 4 JPA repository interfaces.
+2020-10-28 14:22:53.568  INFO 4504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@965bcbc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:22:53.584  INFO 4504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:22:54.021  INFO 4504 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-28 14:22:54.193  INFO 4504 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-28 14:22:54.428  INFO 4504 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-28 14:22:55.693  INFO 4504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-28 14:22:56.068  INFO 4504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-28 14:22:56.131  INFO 4504 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-28 14:22:57.428  INFO 4504 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-28 14:22:57.443  INFO 4504 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:22:57.662  WARN 4504 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-28 14:22:58.896  WARN 4504 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:22:58.896  WARN 4504 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-28 14:22:58.896  WARN 4504 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:22:59.803  INFO 4504 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-28 14:23:00.303  INFO 4504 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:23:00.990  INFO 4504 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75fdbd71, org.springframework.security.web.context.SecurityContextPersistenceFilter@712adc04, org.springframework.security.web.header.HeaderWriterFilter@18b431ea, org.springframework.security.web.authentication.logout.LogoutFilter@2762bd70, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@a43a21e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a9e261d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7e1f88e2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a73f164, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1aa21319, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a6dfbb2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@697f4085, org.springframework.security.web.session.SessionManagementFilter@7cf618f3, org.springframework.security.web.access.ExceptionTranslationFilter@1a42da0a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37ec9c49]
+2020-10-28 14:23:02.146  INFO 4504 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:23:04.146  INFO 4504 --- [main] c.t.movieReview.MovieControllerTest      : Started MovieControllerTest in 16.003 seconds (JVM running for 17.648)
+2020-10-28 14:23:04.568  INFO 4504 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:23:04.568  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:23:04.600  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 32 ms
+2020-10-28 14:23:04.678  INFO 4504 --- [main] c.t.m.controller.MovieController         : GET /movies
+2020-10-28 14:23:05.053  INFO 4504 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:23:05.068  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:23:05.068  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-28 14:23:05.146  INFO 4504 --- [main] c.t.m.controller.MovieController         : POST /movies Movie [id=19, name=Good Will Hunting, goodCount=0, badCount=0]
+2020-10-28 14:23:05.271  INFO 4504 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:23:05.271  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:23:05.271  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-28 14:23:05.428  INFO 4504 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:23:05.428  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:23:05.428  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-28 14:23:05.428  INFO 4504 --- [main] c.t.m.controller.MovieController         : POST /movies Movie [id=19, name=Good Will Hunting, goodCount=0, badCount=0]
+2020-10-28 14:23:05.459  INFO 4504 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:23:05.459  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:23:05.459  INFO 4504 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2020-10-28 14:23:05.850  INFO 4504 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:23:05.865  INFO 4504 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:23:05.881  INFO 4504 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-28 14:23:05.881  INFO 4504 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-28 14:27:48.616  INFO 14712 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Starting MovieReviewApplication on LAPTOP-3N47KQ25 with PID 14712 (D:\WorkSpace\movieService\target\classes started by tomka in D:\WorkSpace\movieService)
+2020-10-28 14:27:48.638  INFO 14712 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : No active profile set, falling back to default profiles: default
+2020-10-28 14:27:48.723  INFO 14712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-28 14:27:48.723  INFO 14712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-28 14:27:52.151  INFO 14712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-28 14:27:52.287  INFO 14712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96ms. Found 4 JPA repository interfaces.
+2020-10-28 14:27:52.974  INFO 14712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@64e2404c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:27:52.979  INFO 14712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:27:53.606  INFO 14712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-28 14:27:53.619  INFO 14712 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-28 14:27:53.620  INFO 14712 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-28 14:27:53.800  INFO 14712 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-28 14:27:53.800  INFO 14712 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5077 ms
+2020-10-28 14:27:54.120  INFO 14712 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-28 14:27:54.454  INFO 14712 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-28 14:27:54.461  INFO 14712 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-28 14:27:54.926  INFO 14712 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-28 14:27:55.017  INFO 14712 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-28 14:27:55.196  INFO 14712 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-28 14:27:55.344  INFO 14712 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-28 14:27:56.078  INFO 14712 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-28 14:27:56.088  INFO 14712 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:27:56.158  INFO 14712 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-10-28 14:27:56.233  WARN 14712 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-28 14:27:56.874  WARN 14712 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:27:56.874  WARN 14712 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-28 14:27:56.875  WARN 14712 --- [restartedMain] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:27:57.606  INFO 14712 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:27:58.125  INFO 14712 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@560a6755, org.springframework.security.web.context.SecurityContextPersistenceFilter@71439135, org.springframework.security.web.header.HeaderWriterFilter@43d284e2, org.springframework.security.web.authentication.logout.LogoutFilter@243e5c68, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13ec3a2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@188f0587, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7f9c3813, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@792b382c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@477dd3bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@668e7f0a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@236f4105, org.springframework.security.web.session.SessionManagementFilter@1cdfd826, org.springframework.security.web.access.ExceptionTranslationFilter@4e6aab8d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3abf32c0]
+2020-10-28 14:27:58.301  INFO 14712 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:27:59.063  INFO 14712 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-10-28 14:27:59.115  INFO 14712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-28 14:27:59.750  INFO 14712 --- [restartedMain] c.t.movieReview.MovieReviewApplication   : Started MovieReviewApplication in 11.672 seconds (JVM running for 14.167)
+2020-10-28 14:27:59.965  INFO 14712 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-28 14:27:59.983  INFO 14712 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-10-28 14:28:01.048  INFO 14712 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:28:01.052  INFO 14712 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:28:01.057  INFO 14712 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-28 14:28:01.063  INFO 14712 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-28 14:29:54.994  INFO 12896 --- [main] c.t.movieReview.MovieControllerTest      : Starting MovieControllerTest on LAPTOP-3N47KQ25 with PID 12896 (started by tomka in D:\WorkSpace\movieService)
+2020-10-28 14:29:55.019  INFO 12896 --- [main] c.t.movieReview.MovieControllerTest      : No active profile set, falling back to default profiles: default
+2020-10-28 14:29:58.967  INFO 12896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-28 14:29:59.109  INFO 12896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125ms. Found 4 JPA repository interfaces.
+2020-10-28 14:30:00.099  INFO 12896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1e6d30c0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:30:00.127  INFO 12896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:30:00.752  INFO 12896 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-28 14:30:00.952  INFO 12896 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-28 14:30:01.275  INFO 12896 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-28 14:30:02.612  INFO 12896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-28 14:30:03.050  INFO 12896 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-28 14:30:03.176  INFO 12896 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-28 14:30:04.606  INFO 12896 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-28 14:30:04.626  INFO 12896 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:30:04.871  WARN 12896 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-28 14:30:06.292  WARN 12896 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:30:06.293  WARN 12896 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-28 14:30:06.293  WARN 12896 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:30:07.288  INFO 12896 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-28 14:30:07.787  INFO 12896 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:30:08.547  INFO 12896 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@529a2d6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@190ec769, org.springframework.security.web.header.HeaderWriterFilter@673ce246, org.springframework.security.web.authentication.logout.LogoutFilter@2c6b36d7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5811f080, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@72412c3d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4a28b6d0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@74f1e112, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@397a70d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f86cd50, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d28c0af, org.springframework.security.web.session.SessionManagementFilter@22bd6b0a, org.springframework.security.web.access.ExceptionTranslationFilter@57283e4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d28114b]
+2020-10-28 14:30:09.205  INFO 12896 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:30:11.365  INFO 12896 --- [main] c.t.movieReview.MovieControllerTest      : Started MovieControllerTest in 17.514 seconds (JVM running for 20.176)
+2020-10-28 14:30:11.898  INFO 12896 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:30:11.898  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:30:11.921  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 23 ms
+2020-10-28 14:30:12.037  INFO 12896 --- [main] c.t.m.controller.MovieController         : GET /movies
+2020-10-28 14:30:12.571  INFO 12896 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:30:12.572  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:30:12.578  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2020-10-28 14:30:12.661  INFO 12896 --- [main] c.t.m.controller.MovieController         : POST /movies Movie [id=19, name=Good Will Hunting, goodCount=0, badCount=0]
+2020-10-28 14:30:12.813  INFO 12896 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:30:12.815  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:30:12.821  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2020-10-28 14:30:12.995  INFO 12896 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:30:12.996  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:30:13.002  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2020-10-28 14:30:13.005  INFO 12896 --- [main] c.t.m.controller.MovieController         : POST /movies Movie [id=19, name=Good Will Hunting, goodCount=0, badCount=0]
+2020-10-28 14:30:13.054  INFO 12896 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:30:13.055  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:30:13.071  INFO 12896 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2020-10-28 14:30:13.522  INFO 12896 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:30:13.543  INFO 12896 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:30:13.548  INFO 12896 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-28 14:30:13.557  INFO 12896 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-10-28 14:34:18.291  INFO 13024 --- [main] c.t.movieReview.MovieControllerTest      : Starting MovieControllerTest on LAPTOP-3N47KQ25 with PID 13024 (started by tomka in D:\WorkSpace\movieService)
+2020-10-28 14:34:18.295  INFO 13024 --- [main] c.t.movieReview.MovieControllerTest      : No active profile set, falling back to default profiles: default
+2020-10-28 14:34:22.073  INFO 13024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-10-28 14:34:22.210  INFO 13024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121ms. Found 4 JPA repository interfaces.
+2020-10-28 14:34:23.071  INFO 13024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6c2883b1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:34:23.100  INFO 13024 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-28 14:34:23.642  INFO 13024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-28 14:34:23.755  INFO 13024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-28 14:34:23.960  INFO 13024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-28 14:34:25.307  INFO 13024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-28 14:34:25.569  INFO 13024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-28 14:34:25.640  INFO 13024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-10-28 14:34:26.961  INFO 13024 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-28 14:34:26.972  INFO 13024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:34:27.236  WARN 13024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-28 14:34:28.583  WARN 13024 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:34:28.583  WARN 13024 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : Spring Data REST HAL Browser is deprecated! Prefer the HAL Explorer (artifactId: spring-data-rest-hal-explorer)!
+2020-10-28 14:34:28.584  WARN 13024 --- [main] o.s.d.rest.webmvc.halbrowser.HalBrowser  : ---
+2020-10-28 14:34:29.493  INFO 13024 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/sampledata'
+2020-10-28 14:34:30.032  INFO 13024 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2020-10-28 14:34:30.687  INFO 13024 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@67f8586f, org.springframework.security.web.context.SecurityContextPersistenceFilter@8cd00bc, org.springframework.security.web.header.HeaderWriterFilter@7b4b6dca, org.springframework.security.web.authentication.logout.LogoutFilter@1ccfa4b8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b0d42b6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@673ce246, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@63c6579, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@355e1080, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d8458a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b031f53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c7a699b, org.springframework.security.web.session.SessionManagementFilter@5baabba, org.springframework.security.web.access.ExceptionTranslationFilter@6afd0ef8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15db4dc]
+2020-10-28 14:34:31.290  INFO 13024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:34:33.354  INFO 13024 --- [main] c.t.movieReview.MovieControllerTest      : Started MovieControllerTest in 15.908 seconds (JVM running for 17.688)
+2020-10-28 14:34:33.730  INFO 13024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:34:33.730  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:34:33.754  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 23 ms
+2020-10-28 14:34:33.879  INFO 13024 --- [main] c.t.m.controller.MovieController         : GET /movies
+2020-10-28 14:34:34.325  INFO 13024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:34:34.326  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:34:34.330  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2020-10-28 14:34:34.407  INFO 13024 --- [main] c.t.m.controller.MovieController         : POST /movies Movie [id=19, name=Good Will Hunting, goodCount=0, badCount=0]
+2020-10-28 14:34:34.552  INFO 13024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:34:34.552  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:34:34.556  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2020-10-28 14:34:34.726  INFO 13024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:34:34.727  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:34:34.734  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2020-10-28 14:34:34.738  INFO 13024 --- [main] c.t.m.controller.MovieController         : POST /movies Movie [id=19, name=Good Will Hunting, goodCount=0, badCount=0]
+2020-10-28 14:34:34.754  INFO 13024 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-10-28 14:34:34.754  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-10-28 14:34:34.761  INFO 13024 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2020-10-28 14:34:35.029  INFO 13024 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-28 14:34:35.039  INFO 13024 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-10-28 14:34:35.044  INFO 13024 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-10-28 14:34:35.055  INFO 13024 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
