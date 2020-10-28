@@ -15,7 +15,9 @@ pipeline {
 			steps{
 				bat 'docker build -t movie-app .'
 				bat 'docker tag movie-app tomkariath/movie-app'
-				bat 'docker push tomkariath/movie-app'
+				withDockerRegistry([ credentialsId: "dockerCred", url: "" ]) {
+					bat 'docker push tomkariath/movie-app'
+				}
 			}
         }
     }

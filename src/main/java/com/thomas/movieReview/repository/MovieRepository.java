@@ -1,7 +1,6 @@
 package com.thomas.movieReview.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Repository;
 
 import com.thomas.movieReview.model.Movie;
@@ -11,6 +10,6 @@ public interface MovieRepository extends JpaRepository<Movie, Integer> {
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	@PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('ADMIN')")
 	Movie save (Movie movie);
 }

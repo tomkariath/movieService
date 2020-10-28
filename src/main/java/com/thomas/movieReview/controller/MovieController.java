@@ -124,7 +124,7 @@ public class MovieController {
 
 			ratingRepo.save(rating);
 
-			movie.get().setGoodCount(movie.get().getBadCount()+1);	
+			movie.get().setBadCount(movie.get().getBadCount()+1);	
 			movieRepo.save(movie.get());
 		}
 		else {
