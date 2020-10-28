@@ -4,14 +4,18 @@ pipeline {
 	
 	stages{
         stage("Runing unit tests") {
-			withMaven(maven : 'maven363'){
-				sh 'mvn clean install'
+			steps{
+				withMaven(maven : 'maven363'){
+					sh 'mvn clean install'
+				}
 			}
 		}
             
         stage("Staging") {
-            withMaven(maven : 'maven363'){
-				sh 'mvn spring-boot:run'
+			steps{
+				withMaven(maven : 'maven363'){
+					sh 'mvn spring-boot:run'
+				}
 			}
         }
     }
