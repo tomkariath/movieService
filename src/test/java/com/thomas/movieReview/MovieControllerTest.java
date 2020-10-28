@@ -2,17 +2,23 @@ package com.thomas.movieReview;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 import java.util.Optional;
+
+import javax.servlet.Filter;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.web.util.NestedServletException;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
 
 import com.thomas.movieReview.model.Movie;
 import com.thomas.movieReview.repository.MovieRepository;
@@ -20,6 +26,12 @@ import com.thomas.movieReview.repository.UserRepository;
 
 public class MovieControllerTest extends ApiTest{
 
+	@Autowired
+	private WebApplicationContext context;
+
+	@Autowired
+	private Filter springSecurityFilterChain;
+	
 	@Mock
 	MovieRepository movieRepo;
 	
@@ -30,13 +42,16 @@ public class MovieControllerTest extends ApiTest{
 	@Override
 	public void initialize() {
 		super.initialize();
+		 mockMvc = MockMvcBuilders.webAppContextSetup(context)
+		            .addFilters(springSecurityFilterChain).build();
 	}
 
 	@Test
+	//@WithMockUser(roles="ADMIN")
 	public void getMoviesTest() throws Exception {
 		String uri = "/movies";
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(uri)
-				.accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
+		MvcResult mvcResult = mockMvc.perform(get(uri)
+				.accept(MediaType.APPLICATION_JSON_VALUE).with(httpBasic("Johny", "Oracle123"))).andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
@@ -45,7 +60,26 @@ public class MovieControllerTest extends ApiTest{
 		Movie[] movieList = super.jsonToObj(response, Movie[].class);
 		assertTrue(movieList.length > 0);
 	}
+	
+	@Test
+	//@WithMockUser(roles="USER")
+	public void addMovieUserTest() throws Exception {
+		String uri = "/movies";
+		
+		Movie movie = new Movie();
+		movie.setId(19);
+		movie.setName("Good Will Hunting");
+		movie.setGoodCount(0);
+		movie.setBadCount(0);
+		String json = super.objToJson(movie);
 
+		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(uri)
+				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json).with(httpBasic("Thomas", "Oracle123@"))).andReturn();
+		
+		int status = mvcResult.getResponse().getStatus();
+		assertEquals(201, status);
+	}
+	
 	@Test
 	@WithMockUser(roles="ADMIN")
 	public void addMovieAdminTest() throws Exception {
@@ -59,36 +93,21 @@ public class MovieControllerTest extends ApiTest{
 		String json = super.objToJson(movie);
 
 		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(uri)
-				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json)).andReturn();
+				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json).with(httpBasic("Johny", "Oracle123"))).andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
-		assertEquals(201, status);
-	}
-	
-	@Test(expected = NestedServletException.class)
-	@WithMockUser(roles="USER")
-	public void addMovieUserTest() throws Exception {
-		String uri = "/movies";
-		
-		Movie movie = new Movie();
-		movie.setId(19);
-		movie.setName("Good Will Hunting");
-		movie.setGoodCount(0);
-		movie.setBadCount(0);
-		String json = super.objToJson(movie);
-
-		mockMvc.perform(MockMvcRequestBuilders.post(uri)
-				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json)).andReturn();
+		assertEquals(403, status);
 	}
 
 	@Test
+	//@WithMockUser(roles="ADMIN")
 	public void upVoteTest() throws Exception {
 		int id=19;
 		Optional<Movie> mockMovie = movieRepo.findById(id);
 		String uri = "/movies/"+id+"/upVote";
 
 
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri))
+		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri).with(httpBasic("Johny", "Oracle123")))
 				.andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
@@ -111,13 +130,14 @@ public class MovieControllerTest extends ApiTest{
 	}
 
 	@Test
+	//@WithMockUser(roles="ADMIN")
 	public void downVoteTest() throws Exception {
 		int id=19;
 		Optional<Movie> mockMovie = movieRepo.findById(id);
 		String uri = "/movies/"+id+"/upVote";
 
 
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri))
+		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri).with(httpBasic("Johny", "Oracle123")))
 				.andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
