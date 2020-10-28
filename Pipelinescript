@@ -11,12 +11,8 @@ pipeline {
 			}
 		}
             
-        stage("Staging") {
-			steps{
-				withMaven(maven : 'maven363'){
-					sh 'mvn spring-boot:run'
-				}
-			}
+        stage("Build Docker Image") {
+			sh 'docker build -t movie-app .'
         }
     }
 }
