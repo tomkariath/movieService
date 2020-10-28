@@ -1,5 +1,9 @@
 pipeline {
-
+	environment { 
+        registry = "tomkariath/movie-app" 
+        registryCredential = 'dockerCred' 
+        dockerImage = '' 
+    }
 	agent any
 	
 	stages{
@@ -11,14 +15,26 @@ pipeline {
 			}
 		}
             
-        stage("Build Docker Image") {
-			steps{
-				bat 'docker build -t movie-app .'
-				bat 'docker tag movie-app tomkariath/movie-app'
-				withDockerRegistry([ credentialsId: "dockerCred", url: "" ]) {
-					bat 'docker push tomkariath/movie-app'
-				}
-			}
+        stage('Building our image') { 
+            steps { 
+                script { 
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER" 
+                }
+            } 
         }
+        stage('Deploy our image') { 
+            steps { 
+                script { 
+                    docker.withRegistry( '', registryCredential ) { 
+                        dockerImage.push() 
+                    }
+                } 
+            }
+        } 
+        stage('Cleaning up') { 
+            steps { 
+                sh "docker rmi $registry:$BUILD_NUMBER" 
+            }
+        } 
     }
 }
