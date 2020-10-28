@@ -12,7 +12,9 @@ pipeline {
 		}
             
         stage("Build Docker Image") {
-			sh 'docker build -t movie-app .'
+			steps{
+				sh 'docker build -t movie-app .'
+			}
         }
     }
 }
