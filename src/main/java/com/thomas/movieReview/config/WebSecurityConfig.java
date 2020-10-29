@@ -42,21 +42,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	}
 
 
-	/*
-	 * @Bean public PasswordEncoder passwordEncoder() { return new
-	 * BCryptPasswordEncoder(); }
-	 * 
-	 * @Bean
-	 * 
-	 * @Override protected UserDetailsService userDetailsService() { UserDetails
-	 * user1 = User .withUsername("Johny")
-	 * .password(passwordEncoder().encode("Oracle123")) .roles("USER") .build();
-	 * UserDetails user2 = User .withUsername("Thomas")
-	 * .password(passwordEncoder().encode("Oracle123@")) .roles("ADMIN") .build();
-	 * 
-	 * return new InMemoryUserDetailsManager(user1, user2); }
-	 */
-
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
