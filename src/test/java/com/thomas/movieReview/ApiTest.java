@@ -1,5 +1,7 @@
 package com.thomas.movieReview;
 
+import javax.servlet.Filter;
+
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,9 +21,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public abstract class ApiTest {
 
 	@Autowired
-	WebApplicationContext webApplicationContext;
+	protected WebApplicationContext webApplicationContext;
+	
+	@Autowired
+	protected Filter springSecurityFilterChain;
 
 	MockMvc mockMvc;
+	
+	public static final String USER_NAME = "Johny";
+	public static final String USER_PASS = "Oracle123";
+	public static final String ADMIN_NAME = "Thomas";
+	public static final String ADMIN_PASS = "Oracle123@";
 
 
 	void initialize() {

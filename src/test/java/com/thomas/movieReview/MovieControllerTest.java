@@ -7,18 +7,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 import java.util.Optional;
 
-import javax.servlet.Filter;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 
 import com.thomas.movieReview.model.Movie;
 import com.thomas.movieReview.repository.MovieRepository;
@@ -26,11 +22,13 @@ import com.thomas.movieReview.repository.UserRepository;
 
 public class MovieControllerTest extends ApiTest{
 
-	@Autowired
-	private WebApplicationContext context;
+	/*
+	 * @Autowired private WebApplicationContext context;
+	 */
 
-	@Autowired
-	private Filter springSecurityFilterChain;
+	/*
+	 * @Autowired private Filter springSecurityFilterChain;
+	 */
 	
 	@Mock
 	MovieRepository movieRepo;
@@ -42,7 +40,7 @@ public class MovieControllerTest extends ApiTest{
 	@Override
 	public void initialize() {
 		super.initialize();
-		 mockMvc = MockMvcBuilders.webAppContextSetup(context)
+		 mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
 		            .addFilters(springSecurityFilterChain).build();
 	}
 
@@ -51,7 +49,7 @@ public class MovieControllerTest extends ApiTest{
 	public void getMoviesTest() throws Exception {
 		String uri = "/movies";
 		MvcResult mvcResult = mockMvc.perform(get(uri)
-				.accept(MediaType.APPLICATION_JSON_VALUE).with(httpBasic("Johny", "Oracle123"))).andReturn();
+				.accept(MediaType.APPLICATION_JSON_VALUE).with(httpBasic(USER_NAME, USER_PASS))).andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);
@@ -74,7 +72,7 @@ public class MovieControllerTest extends ApiTest{
 		String json = super.objToJson(movie);
 
 		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(uri)
-				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json).with(httpBasic("Thomas", "Oracle123@"))).andReturn();
+				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json).with(httpBasic(ADMIN_NAME, ADMIN_PASS))).andReturn();
 		
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(201, status);
@@ -93,7 +91,7 @@ public class MovieControllerTest extends ApiTest{
 		String json = super.objToJson(movie);
 
 		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post(uri)
-				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json).with(httpBasic("Johny", "Oracle123"))).andReturn();
+				.contentType(MediaType.APPLICATION_JSON_VALUE).content(json).with(httpBasic(USER_NAME, USER_PASS))).andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(403, status);
@@ -107,7 +105,7 @@ public class MovieControllerTest extends ApiTest{
 		String uri = "/movies/"+id+"/upVote";
 
 
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri).with(httpBasic("Johny", "Oracle123")))
+		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri).with(httpBasic(USER_NAME, USER_PASS)))
 				.andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
@@ -137,7 +135,7 @@ public class MovieControllerTest extends ApiTest{
 		String uri = "/movies/"+id+"/upVote";
 
 
-		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri).with(httpBasic("Johny", "Oracle123")))
+		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.put(uri).with(httpBasic(USER_NAME, USER_PASS)))
 				.andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
