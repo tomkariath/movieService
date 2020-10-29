@@ -34,7 +34,7 @@ $(document).ready(function() {
 
 		$.get(url, function() {
 			location.reload();
-		}).error(function() {
+		}).fail(function() {
     		alert("Already Voted for this movie");
 		});
 	});
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 		$.get(url, function() {
 			location.reload();
-		}).error(function() {
+		}).fail(function() {
     		alert("Already Voted for this movie");
 		});
 	});

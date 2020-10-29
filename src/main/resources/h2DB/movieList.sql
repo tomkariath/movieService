@@ -15,3 +15,5 @@ insert ignore into user values (2,'$2a$10$JoKoL1wmCSZ7Oe2PNU/J8OWkZkpGrzFU/DLcah
 
 insert ignore into user_roles values (1,2);
 insert ignore into user_roles values (2,1);
+
+delete from rating where rating_id > 0;
