@@ -3,6 +3,7 @@ package com.thomas.movieReview.controller;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
@@ -24,6 +25,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.thomas.movieReview.exception.MovieNotFoundException;
 import com.thomas.movieReview.model.Movie;
 import com.thomas.movieReview.model.Rating;
+import com.thomas.movieReview.model.Role;
 import com.thomas.movieReview.model.User;
 import com.thomas.movieReview.repository.MovieRepository;
 import com.thomas.movieReview.repository.RatingRepository;
@@ -73,6 +75,14 @@ public class MovieController {
 	public List<User> getAllUsers() {
 		List<User> userList = userRepo.findAll();
 		return userList;
+	}
+
+	// users
+	@GetMapping(path = "/users/{username}/roles")
+	public Set<Role> getUserRole(@PathVariable String username) {
+		User user = userRepo.findByUsername(username);
+		Set<Role> role = user.getRoles();
+		return role;
 	}
 
 	// addMovies
