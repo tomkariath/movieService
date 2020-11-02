@@ -43,7 +43,7 @@ public class MovieController {
 	@Autowired
 	RatingRepository ratingRepo;
 
-	//getMovies
+	// getMovies
 	@GetMapping(path = "/movies")
 	public List<Movie> getAllMovies() {
 		logger.info("GET /movies");
@@ -51,7 +51,7 @@ public class MovieController {
 		return moviesList;
 	}
 
-	//showMovies
+	// showMovies
 	@GetMapping(path = "/showlist")
 	public ModelAndView showMovies() {
 		logger.info("GET /showlist");
@@ -61,73 +61,77 @@ public class MovieController {
 		return mav;
 	}
 
-	//users
+	// showMovies
+	@GetMapping(path = "/getJet")
+	public void redirectToJet(HttpServletResponse response) throws IOException {
+		logger.info("GET /getJet");
+		response.sendRedirect("http://localhost:8000/");		
+	}
+
+	// users
 	@GetMapping(path = "/users")
 	public List<User> getAllUsers() {
 		List<User> userList = userRepo.findAll();
 		return userList;
 	}
 
-	//addMovies
+	// addMovies
 	@PostMapping(path = "/movies")
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public void addMovie(@Valid @RequestBody Movie movie, 
-			HttpServletResponse httpResponse) throws IOException {
-		logger.info("POST /movies "+movie.toString());
+	public void addMovie(@Valid @RequestBody Movie movie, HttpServletResponse httpResponse) throws IOException {
+		logger.info("POST /movies " + movie.toString());
 		movieRepo.save(movie);
 	}
 
-	//upVoteMovie
+	// upVoteMovie
 	@RequestMapping(path = "/movies/{movieId}/upvote")
 	public void upVote(@PathVariable Integer movieId) throws Exception {
-		logger.info("GET /movies/"+movieId+"upvote");
+		logger.info("UPVOTE /movies/" + movieId + "upvote");
 
 		Optional<Movie> movie = movieRepo.findById(movieId);
 
 		if (!movie.isPresent()) {
-			throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
+			throw new MovieNotFoundException("Movie with id: " + movieId + " doesn't exist");
 		}
 
 		User reviewer = userRepo.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 
-		if (ratingRepo.findByMovieIdAndUserId(movieId, reviewer.getId())==null) {
+		if (ratingRepo.findByMovieIdAndUserId(movieId, reviewer.getId()) == null) {
 			Rating rating = new Rating();
 			rating.setMovie(movie.get());
 			rating.setUser(reviewer);
 
 			ratingRepo.save(rating);
 
-			movie.get().setGoodCount(movie.get().getGoodCount()+1);	
+			movie.get().setGoodCount(movie.get().getGoodCount() + 1);
 			movieRepo.save(movie.get());
-		}
-		else {
+		} else {
 			throw new Exception("Already Voted");
 		}
 	}
 
-	//downVoteMovie
+	// downVoteMovie
 	@RequestMapping(path = "/movies/{movieId}/downvote")
 	public void downVoteMovie(@PathVariable Integer movieId) throws Exception {
-		logger.info("GET /movies/"+movieId+"upvote");
+		logger.info("DOWNVOTE /movies/" + movieId + "downvote");
 		Optional<Movie> movie = movieRepo.findById(movieId);
 
 		if (!movie.isPresent()) {
-			throw new MovieNotFoundException("Movie with id: "+movieId +" doesn't exist");
+			throw new MovieNotFoundException("Movie with id: " + movieId + " doesn't exist");
 		}
 
 		User reviewer = userRepo.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
 
-		if (ratingRepo.findByMovieIdAndUserId(movieId, reviewer.getId())==null) {
+		if (ratingRepo.findByMovieIdAndUserId(movieId, reviewer.getId()) == null) {
 			Rating rating = new Rating();
 			rating.setMovie(movie.get());
 			rating.setUser(reviewer);
 
 			ratingRepo.save(rating);
 
-			movie.get().setBadCount(movie.get().getBadCount()+1);	
+			movie.get().setBadCount(movie.get().getBadCount() + 1);
 			movieRepo.save(movie.get());
-		}
-		else {
+		} else {
 			throw new Exception("Already Voted");
 		}
 	}
