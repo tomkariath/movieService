@@ -114,6 +114,12 @@ public class MovieController {
 			ratingRepo.save(rating);
 
 			movie.get().setGoodCount(movie.get().getGoodCount() + 1);
+			
+			int goodCount = movie.get().getGoodCount();
+			int badCount = movie.get().getBadCount();
+			int avgRating = ((goodCount*5)+badCount)/(goodCount+badCount);
+			movie.get().setAvgRating(avgRating);
+			
 			movieRepo.save(movie.get());
 		} else {
 			throw new Exception("Already Voted");
@@ -140,6 +146,11 @@ public class MovieController {
 			ratingRepo.save(rating);
 
 			movie.get().setBadCount(movie.get().getBadCount() + 1);
+			int goodCount = movie.get().getGoodCount();
+			int badCount = movie.get().getBadCount();
+			int avgRating = ((goodCount*5)+badCount)/(goodCount+badCount);
+			movie.get().setAvgRating(avgRating);
+			
 			movieRepo.save(movie.get());
 		} else {
 			throw new Exception("Already Voted");

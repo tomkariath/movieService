@@ -1,11 +1,11 @@
 delete from movie where name='Good Will Hunting';
 set mode MYSQL;
-insert ignore into movie values (1,3,1,'A Clockwork Orange');
-insert ignore into movie values (2,4,1,'Rangi Taranga');
-insert ignore into movie values (3,5,9,'Masaan');
-insert ignore into movie values (4,2,6,'Afro Samurai');
-insert ignore into movie values (5,5,3,'City of God');
-insert ignore into movie values (6,5,8,'True Grit');
+insert ignore into movie values (1,3,1,'A Clockwork Orange',3);
+insert ignore into movie values (2,4,1,'Rangi Taranga',1);
+insert ignore into movie values (3,5,9,'Masaan',4);
+insert ignore into movie values (4,2,6,'Afro Samurai',1);
+insert ignore into movie values (5,5,3,'City of God',5);
+insert ignore into movie values (6,5,8,'True Grit',9);
 
 insert ignore into role values (1,'ROLE_ADMIN');
 insert ignore into role values (2,'ROLE_USER');

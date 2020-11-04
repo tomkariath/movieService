@@ -20,7 +20,16 @@ public class Movie {
 	private String name;
 	private Integer goodCount=0;
 	private Integer badCount=0;
+	private Integer avgRating=0;
 	
+	public Integer getAvgRating() {
+		return avgRating;
+	}
+
+	public void setAvgRating(Integer avgRating) {
+		this.avgRating = avgRating;
+	}
+
 	@JsonIgnore
 	@OneToMany(mappedBy = "movie")
 	private List<Rating> ratings;
